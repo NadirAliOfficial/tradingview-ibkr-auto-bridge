@@ -9,4 +9,4 @@ It ensures **24/7 trading reliability** by running on a VPS, directly connecting
 - Supports multiple strategies (configurable in `config.json`)  
 - VPS-ready (Ubuntu/Windows)  
 - Trade logging for monitoring and debugging
-<!-- updated: 2023-12-30-r01 -->
+<!-- updated: 2024-04-27-r01 -->
