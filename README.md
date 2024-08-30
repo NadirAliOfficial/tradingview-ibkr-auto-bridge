@@ -11,4 +11,3 @@ It ensures **24/7 trading reliability** by running on a VPS, directly connecting
 - Trade logging for monitoring and debugging
 <!-- updated: 2025-10-31-r01 -->
 
-
