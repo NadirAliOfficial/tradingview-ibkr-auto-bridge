@@ -1,0 +1,7 @@
+flask
+ib_insync
+asyncio
+argparse
+logging
+sqlite3
+datetime
