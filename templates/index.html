@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="15">
+<title>TradingView → IBKR Bridge</title>
+<style>
+body{font-family:system-ui,sans-serif;margin:2rem;max-width:960px}
+table{border-collapse:collapse;width:100%;margin-bottom:2rem}
+th,td{border:1px solid #ccc;padding:.4rem .6rem;text-align:left;font-size:.9rem}
+th{background:#f3f3f3}
+code{word-break:break-all}
+</style>
+</head>
+<body>
+<h1>TradingView → IBKR Bridge</h1>
+<p><strong>Status:</strong> {{ dashboard_data.status }}</p>
+
+<h2>Account</h2>
+<table>
+{% for k, v in dashboard_data.account.items() %}<tr><th>{{ k }}</th><td>{{ v }}</td></tr>
+{% else %}<tr><td>No account data yet.</td></tr>{% endfor %}
+</table>
+
+<h2>Positions</h2>
+<table>
+<tr><th>Symbol</th><th>Position</th><th>Avg cost</th></tr>
+{% for p in dashboard_data.positions %}<tr><td>{{ p.symbol }}</td><td>{{ p.position }}</td><td>{{ p.avgCost }}</td></tr>
+{% else %}<tr><td colspan="3">No open positions.</td></tr>{% endfor %}
+</table>
+
+<h2>Trade log</h2>
+<table>
+<tr><th>Time</th><th>Symbol</th><th>Action</th><th>Details</th></tr>
+{% for t in trade_log|reverse %}<tr><td>{{ t.timestamp }}</td><td>{{ t.symbol }}</td><td>{{ t.action }}</td><td><code>{{ t.details }}</code></td></tr>
+{% else %}<tr><td colspan="4">No trades yet.</td></tr>{% endfor %}
+</table>
+</body>
+</html>
