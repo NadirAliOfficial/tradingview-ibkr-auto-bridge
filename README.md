@@ -6,7 +6,7 @@ It ensures **24/7 trading reliability** by running on a VPS, directly connecting
 ## 🚀 Features
 - Direct API connection to IBKR (TWS / Gateway)  
 - Fail-safe order execution (no missed trades)  
-- Supports multiple strategies (configurable in `config.json`)  
+- Supports multiple strategies via separate TradingView alerts  
 - VPS-ready (Ubuntu/Windows)  
 - Trade logging for monitoring and debugging
 
